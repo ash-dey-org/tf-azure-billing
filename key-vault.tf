@@ -28,38 +28,19 @@ data "azurerm_key_vault_secret" "azure_tenant_id" {
   key_vault_id = data.azurerm_key_vault.vault.id
 }
 
-data "azurerm_key_vault_secret" "defender_app_id" {
-  name         = "defender-app-id"
+data "azurerm_key_vault_secret" "billing_app_id" {
+  name         = "billing-app-id"
   key_vault_id = data.azurerm_key_vault.vault.id
 }
 
-data "azurerm_key_vault_secret" "defender_app_secret" {
-  name         = "defender-app-secret"
-  key_vault_id = data.azurerm_key_vault.vault.id
-}
-data "azurerm_key_vault_secret" "sumo_collector_url" {
-  name         = "sumo-collector-url"
+data "azurerm_key_vault_secret" "billing_app_secret" {
+  name         = "billing-app-secret"
   key_vault_id = data.azurerm_key_vault.vault.id
 }
 
 data "azurerm_key_vault_secret" "comm_service_conn_string" {
   name = "comm-service-conn-string"
   # Azure communication services connection string
-  key_vault_id = data.azurerm_key_vault.vault.id
-}
-
-data "azurerm_key_vault_secret" "sharepoint_url" {
-  name         = "sharepoint-url"
-  key_vault_id = data.azurerm_key_vault.vault.id
-}
-
-data "azurerm_key_vault_secret" "sharepoint_dir" {
-  name         = "sharepoint-dir"
-  key_vault_id = data.azurerm_key_vault.vault.id
-}
-
-data "azurerm_key_vault_secret" "sharepoint_file_path" {
-  name         = "sharepoint-file-path"
   key_vault_id = data.azurerm_key_vault.vault.id
 }
 
