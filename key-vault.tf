@@ -1,5 +1,4 @@
 
-
 /*
 resource "azurerm_key_vault_access_policy" "keyvault_policy_cms" {
   key_vault_id = data.azurerm_key_vault.vault.id
