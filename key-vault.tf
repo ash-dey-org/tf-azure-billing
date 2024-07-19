@@ -1,5 +1,6 @@
 
 
+/*
 resource "azurerm_key_vault_access_policy" "keyvault_policy_cms" {
   key_vault_id = data.azurerm_key_vault.vault.id
   tenant_id    = data.azurerm_client_config.current.tenant_id
@@ -13,7 +14,6 @@ resource "azurerm_key_vault_access_policy" "keyvault_policy_cms" {
 
 }
 
-/*
 resource "azurerm_role_assignment" "kv" {
   scope                = data.azurerm_key_vault.vault.id
   role_definition_name = "Key Vault Secrets User"
