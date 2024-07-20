@@ -48,4 +48,15 @@ data "azurerm_key_vault_secret" "cert_name" {
   key_vault_id = data.azurerm_key_vault.vault.id
 }
 
+data "azurerm_key_vault_secret" "api_version" {
+  name         = "api-version"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
+
+data "azurerm_key_vault_secret" "vendor_subscriptions" {
+  name         = "vendor-subscriptions"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
+
+
 
