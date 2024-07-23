@@ -32,11 +32,12 @@ data "azurerm_key_vault_secret" "billing_app_id" {
   key_vault_id = data.azurerm_key_vault.vault.id
 }
 
+/*
 data "azurerm_key_vault_secret" "billing_app_secret" {
   name         = "billing-app-secret"
   key_vault_id = data.azurerm_key_vault.vault.id
 }
-
+*/
 data "azurerm_key_vault_secret" "comm_service_conn_string" {
   name = "comm-service-conn-string"
   # Azure communication services connection string

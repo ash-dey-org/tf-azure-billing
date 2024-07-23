@@ -56,7 +56,7 @@ resource "azurerm_linux_function_app" "fa" {
 
     azure_tenant_id          = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.azure_tenant_id.versionless_id})"
     billing_app_id           = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.billing_app_id.versionless_id})"
-    billing_app_secret       = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.billing_app_secret.versionless_id})"
+    # billing_app_secret       = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.billing_app_secret.versionless_id})"
     comm_service_conn_string = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.comm_service_conn_string.versionless_id})"
     kv_url                   = "https://${var.env}-${var.region}-${var.company}-kv-${var.kvname}.vault.azure.net"
     cert_name                = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.cert_name.versionless_id})"
