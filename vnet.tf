@@ -40,6 +40,7 @@ resource "azurerm_subnet" "str-subnet" {
 
 */
 
+/*
 # Private endpoint for main function app
 
 resource "azurerm_private_endpoint" "pe-fa" {
@@ -56,17 +57,21 @@ resource "azurerm_private_endpoint" "pe-fa" {
     subresource_names              = ["sites"]
   }
 
+*/
   /*
   private_dns_zone_group {
     name                 = "ingester-${var.env}-pvtdns"
     private_dns_zone_ids = [azurerm_private_dns_zone.apdz.id]
   }
   */
-
+/*
   depends_on = [
     azurerm_linux_function_app.fa
   ]
 }
+
+*/
+
 
 /*
 # Private endpoint for storage
