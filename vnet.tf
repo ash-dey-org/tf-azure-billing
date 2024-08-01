@@ -58,7 +58,7 @@ resource "azurerm_private_endpoint" "pe-fa" {
   }
 
 */
-  /*
+/*
   private_dns_zone_group {
     name                 = "ingester-${var.env}-pvtdns"
     private_dns_zone_ids = [azurerm_private_dns_zone.apdz.id]
