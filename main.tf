@@ -65,7 +65,7 @@ resource "azurerm_linux_function_app" "fa" {
     # WEBSITE_TIME_ZONE      = "AU"
     WEBSITE_RUN_FROM_PACKAGE            = 1
     WEBSITES_ENABLE_APP_SERVICE_STORAGE = true
-    WEBSITE_ENABLE_SYNC_UPDATE_SITE = true
+    WEBSITE_ENABLE_SYNC_UPDATE_SITE     = true
 
   }
 
