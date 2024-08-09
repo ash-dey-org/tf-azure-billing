@@ -65,6 +65,7 @@ resource "azurerm_linux_function_app" "fa" {
     # WEBSITE_TIME_ZONE      = "AU"
     WEBSITE_RUN_FROM_PACKAGE            = 1
     WEBSITES_ENABLE_APP_SERVICE_STORAGE = true
+    WEBSITE_ENABLE_SYNC_UPDATE_SITE     = true
 
   }
 
@@ -74,7 +75,7 @@ resource "azurerm_linux_function_app" "fa" {
     application_insights_connection_string = azurerm_application_insights.insights.connection_string
     always_on                              = true
     application_stack {
-      python_version = "3.10"
+      python_version = "3.11"
     }
     /*
     cors {
