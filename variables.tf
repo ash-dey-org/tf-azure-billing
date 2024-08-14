@@ -85,10 +85,10 @@ variable "pe_fa_address_space" {
 }
 
 /*
-variable "str_address_space" {
-  type        = list(string)
-  description = "storage subnet address space"
+variable "api-version" {
+  type        = string
+  description = "Billing app API version"
 }
-
 */
+
 
