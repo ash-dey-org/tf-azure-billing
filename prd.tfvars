@@ -14,4 +14,4 @@ vnet_address_space  = ["10.134.1.0/24"]
 fn_sn_fa            = ["10.134.1.0/28"]
 pe_fa_address_space = ["10.134.1.16/28"]
 # str_address_space          = ["10.134.1.32/28"]
-api_version = "api-version=2023-11-01"
+# api_version = "api-version=2023-11-01"
