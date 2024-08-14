@@ -84,9 +84,11 @@ variable "pe_fa_address_space" {
   description = "private endpoint subnet address space"
 }
 
+/*
 variable "api-version" {
   type        = string
   description = "Billing app API version"
 }
+*/
 
 
