@@ -16,7 +16,12 @@ terraform {
 # Define credential details for the provider
 provider "azurerm" {
   use_oidc = true
-  features {}
+  features {
+    app_configuration {
+      purge_soft_delete_on_destroy = true
+      recover_soft_deleted         = false
+    }
+  }
   skip_provider_registration = "true"
 }
 
