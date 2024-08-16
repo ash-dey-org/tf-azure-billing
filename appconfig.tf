@@ -6,16 +6,16 @@ resource "azurerm_app_configuration" "bill_app_config" {
   public_network_access = "Enabled"
 }
 
-/*
-resource "azurerm_app_configuration_key" "api_version" {
+
+resource "azurerm_app_configuration_key" "kv_url" {
   configuration_store_id = azurerm_app_configuration.bill_app_config.id
-  key                    = "BillingApp:prd:ApiVersion"
-  value                  = var.api-version
+  key                    = "BillingApp:kv_url"
+  value                  = data.azurerm_key_vault.vault.vault_uri
   depends_on = [
     azurerm_app_configuration.bill_app_config
   ]
 }
-*/
+
 
 
 resource "azurerm_app_configuration_key" "azure_tenant_id" {
