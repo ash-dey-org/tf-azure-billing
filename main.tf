@@ -54,15 +54,15 @@ resource "azurerm_linux_function_app" "fa" {
 
   app_settings = {
 
-    azure_tenant_id = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.azure_tenant_id.versionless_id})"
-    billing_app_id  = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.billing_app_id.versionless_id})"
-    # billing_app_secret       = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.billing_app_secret.versionless_id})"
-    comm_service_conn_string = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.comm_service_conn_string.versionless_id})"
-    kv_url                   = "https://${var.env}-${var.region}-${var.company}-kv-${var.kvname}.vault.azure.net"
-    cert_name                = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.cert_name.versionless_id})"
-    api_version              = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.api_version.versionless_id})"
-    vendor_subscriptions     = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.vendor_subscriptions.versionless_id})"
-    # WEBSITE_TIME_ZONE      = "AU"
+    # azure_tenant_id = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.azure_tenant_id.versionless_id})"
+    # billing_app_id  = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.billing_app_id.versionless_id})"
+    # comm_service_conn_string = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.comm_service_conn_string.versionless_id})"
+    # kv_url                   = "https://${var.env}-${var.region}-${var.company}-kv-${var.kvname}.vault.azure.net"
+    # cert_name                = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.cert_name.versionless_id})"
+    # api_version              = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.api_version.versionless_id})"
+    # vendor_subscriptions     = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.vendor_subscriptions.versionless_id})"
+    billing_app_config       = "${azurerm_app_configuration.bill_app_config.endpoint}"
+    environment              = var.env
     WEBSITE_RUN_FROM_PACKAGE            = 1
     WEBSITES_ENABLE_APP_SERVICE_STORAGE = true
     WEBSITE_ENABLE_SYNC_UPDATE_SITE     = true
