@@ -62,6 +62,7 @@ resource "azurerm_linux_function_app" "fa" {
     # api_version              = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.api_version.versionless_id})"
     # vendor_subscriptions     = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.vendor_subscriptions.versionless_id})"
     billing_app_config                  = "${azurerm_app_configuration.bill_app_config.endpoint}"
+    sumo_collector_url                  = "@Microsoft.KeyVault(SecretUri=${data.azurerm_key_vault_secret.sumo_collector_url.versionless_id})"
     environment                         = var.env
     WEBSITE_RUN_FROM_PACKAGE            = 1
     WEBSITES_ENABLE_APP_SERVICE_STORAGE = true
