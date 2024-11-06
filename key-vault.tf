@@ -60,8 +60,13 @@ data "azurerm_key_vault_secret" "vendor_subscriptions" {
 }
 
 
-data "azurerm_key_vault_secret" "sumo_collector_url" {
-  name         = "sumo-collector-url"
+data "azurerm_key_vault_secret" "sumo_collector_url_csv" {
+  name         = "sumo-collector-url-csv"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
+
+data "azurerm_key_vault_secret" "sumo_collector_url_xlsx" {
+  name         = "sumo-collector-url-xlsx"
   key_vault_id = data.azurerm_key_vault.vault.id
 }
 
