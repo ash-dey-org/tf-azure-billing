@@ -70,4 +70,13 @@ data "azurerm_key_vault_secret" "sumo_collector_url_xlsx" {
   key_vault_id = data.azurerm_key_vault.vault.id
 }
 
+data "azurerm_key_vault_secret" "sumo_category_csv" {
+  name         = "sumo-category-csv"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
+data "azurerm_key_vault_secret" "sumo_category_xlsx" {
+  name         = "sumo-category-xlsx"
+  key_vault_id = data.azurerm_key_vault.vault.id
+}
+
 
