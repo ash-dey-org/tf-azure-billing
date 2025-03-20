@@ -1,0 +1,14 @@
+data.azurerm_client_config.current
+data.azurerm_key_vault.vault
+data.azurerm_key_vault_secret.api_version
+data.azurerm_key_vault_secret.azure_tenant_id
+data.azurerm_key_vault_secret.billing_app_id
+data.azurerm_key_vault_secret.cert_name
+data.azurerm_key_vault_secret.comm_service_conn_string
+data.azurerm_key_vault_secret.sumo_category_csv
+data.azurerm_key_vault_secret.sumo_category_xlsx
+data.azurerm_key_vault_secret.sumo_collector_url_csv
+data.azurerm_key_vault_secret.sumo_collector_url_xlsx
+data.azurerm_key_vault_secret.vendor_subscriptions
+data.azurerm_resource_group.rg
+azurerm_storage_container.secure
